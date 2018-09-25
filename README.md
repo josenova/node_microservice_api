@@ -1,6 +1,6 @@
 ## Example of a microservice API module
 
-Part of a bigger API infrastructure designed to handle thousands of simultaneous request, this module implements functional programming, a repository pattern as well as dependency injection to remove any imports required outside of the module itself. 
+Part of a bigger API infrastructure designed to handle thousands of simultaneous request, this module implements functional programming, a repository pattern as well as dependency injection techniques to remove any imports required outside of the module itself. 
 
 Each request to the API is stateless meaning no state is carried from one request to another. For each request the user authenticates with a JWT and goes through a series of middlewares to ensure the user is authorized. 
 
