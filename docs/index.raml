@@ -1,0 +1,8 @@
+# baseUri: /organization-stock
+get: !include ./organization-stock.get.docs.raml
+
+/strips-received:
+  post: !include ./organization-stock.post.shipment.docs.raml
+
+/strips-delivered:
+  post: !include ./organization-stock.post.delivery.docs.raml

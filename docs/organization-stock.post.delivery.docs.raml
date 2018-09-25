@@ -1,0 +1,14 @@
+# baseUri: /organization-stock/:organizationId/strips-delivered
+
+displayName: Post Organization Delivery
+description: Processes a strip delivery for an organization
+body:
+  application/json:
+    example: !include ./organization-stock.post.sample.json
+responses:
+      200:
+        description: Returns the updated OrganizationStock
+      401:
+        description: This error is returned when user and token is not correct or token is expired.
+      500:
+        description: The server has thrown a critical error in some part of the operation.
