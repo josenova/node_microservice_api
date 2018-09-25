@@ -1,4 +1,4 @@
-## Example of a microservice API module
+# Example of a microservice API module
 
 Part of a bigger API infrastructure designed to handle thousands of simultaneous request, this module implements functional programming, a repository pattern as well as dependency injection techniques to remove any imports required outside of the module itself. 
 
@@ -6,7 +6,7 @@ Each request to the API is stateless meaning no state is carried from one reques
 
 Once authenticated and authorized, the request reaches the Express.js router functions configured in this module. 
 
-# The Repository Pattern
+## The Repository Pattern
 
 Router -> Controller -> Service -> Repository (and back)
 
@@ -22,6 +22,12 @@ Basically the flow of the request goes as follows:
 7. The controller transforms the data for user consumption if required (for example date formatting) and sends the response.
 
 
+### Advantages 
+
 In the end, we obtain a really powerful API capable of working with its own inner types of data, as its capable of implementing data transformation before it gets in and before it gets out. 
 
 This has the advantage of easily applying any data formatting on a consistent point and being able to easily fix any external API changes that might break the module.
+
+### Disadvantages
+
+These levels of abstraction, while clearly separates concerns among the functions, adds complexity and development time. The use of dependency injection may confuse developers that are not used to writing functions that return functions.
